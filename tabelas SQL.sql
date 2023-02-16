@@ -73,4 +73,12 @@ SELECT * FROM ClassesHabilidades
 --INNER JOIN
 SELECT * FROM Personagens INNER JOIN Classes ON Personagens.IdClasse = Classes.IdClasse
 
+--LOGIN ALUNO
+CREATE LOGIN aluno
+WITH PASSWORD = '1234'
+
+CREATE USER aluno FROM LOGIN aluno
+
+GRANT SELECT TO aluno
+
 --FIM DO SCRIPT
